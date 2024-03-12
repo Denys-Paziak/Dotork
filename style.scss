@@ -52,6 +52,7 @@ a {
 .container {
   max-width: 1360px;
   margin: 0 auto;
+
   @media (max-width: 1390px) {
     margin: 0 20px;
   }
@@ -60,6 +61,7 @@ a {
 h1 {
   font-size: 76px;
   font-weight: bold;
+
   @media (max-width: 768px) {
     font-size: 60px;
   }
@@ -68,6 +70,7 @@ h1 {
 h2 {
   font-size: 54px;
   font-weight: 500;
+
   @media (max-width: 768px) {
     font-size: 31px;
     font-weight: 500;
@@ -77,6 +80,7 @@ h2 {
 h3 {
   font-size: 38px;
   font-weight: bold;
+
   @media (max-width: 768px) {
     font-size: 26px;
     font-weight: 400;
@@ -86,6 +90,7 @@ h3 {
 h4 {
   font-size: 28px;
   font-weight: bold;
+
   @media (max-width: 768px) {
     font-size: 22px;
     font-weight: 500;
@@ -111,6 +116,7 @@ h4 {
 
 #menu-icon {
   display: none;
+
   @media (max-width: 800px) {
     display: block;
   }
@@ -130,28 +136,34 @@ h4 {
   @media (min-width: 1320px) {
     width: 100%;
   }
+
   @media (max-width: 1000px) {
     flex-direction: row-reverse;
   }
+
   @media (max-width: 800px) {
     padding: 0 20px;
     height: 72px;
-    background:#1B1C1B;
+    background: #1B1C1B;
   }
+
   .top-header {
     transition: background-color 0.3s ease;
   }
+
   .logo-image {
     display: none;
     width: 32px;
     height: 32px;
     cursor: pointer;
+
     @media (max-width: 1000px) {
       display: block;
       width: 32px;
       height: 32px;
       cursor: pointer;
     }
+
     @media (max-width: 800px) {
       width: 32px;
       height: 32px;
@@ -165,11 +177,13 @@ h4 {
         display: none;
       }
     }
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
     .nav-items {
       a {
         @media (max-width: 800px) {
@@ -178,16 +192,19 @@ h4 {
           margin-bottom: 20px;
         }
       }
+
       @media (max-width: 800px) {
         display: flex;
         flex-direction: column;
         gap: 10px;
       }
+
       @media (max-width: 470px) {
         padding: 20px;
         text-align: center;
       }
     }
+
     @media (max-width: 1000px) {
       gap: 20px;
       flex-direction: row-reverse;
@@ -208,13 +225,14 @@ h4 {
       overflow: hidden;
     }
   }
+
   // #check:checked ~ .navbar {
-    // height: 200px;
-    // align-items: center;
-    // @media (max-width: 524px) {
-    //   height: 90vh;
-    //   padding-bottom: 40px;
-    // }
+  // height: 200px;
+  // align-items: center;
+  // @media (max-width: 524px) {
+  //   height: 90vh;
+  //   padding-bottom: 40px;
+  // }
   // }
   // #check:checked ~ .top-header {
   //   background-color: #1b1c1b;
@@ -227,6 +245,7 @@ h4 {
     // width: 100vw;
     // height: calc(100vh - 72px);
     align-items: center;
+
     @media (max-width: 800px) {
       position: absolute;
       top: 72px;
@@ -238,6 +257,7 @@ h4 {
       border: none;
     }
   }
+
   .navbar a {
     font-size: 16px;
     color: #fff;
@@ -246,6 +266,7 @@ h4 {
     text-decoration: none;
     margin-left: 40px;
     white-space: normal;
+
     @media (max-width: 1200px) {
       margin-left: 15px;
     }
@@ -255,6 +276,7 @@ h4 {
       color: #fff;
     }
   }
+
   .navbar {
     a {
       position: relative;
@@ -276,6 +298,7 @@ h4 {
       }
     }
   }
+
   .icons {
     cursor: pointer;
     display: none;
@@ -303,6 +326,7 @@ h4 {
     display: flex;
     align-items: center;
     gap: 20px;
+
     @media (max-width: 470px) {
       gap: 0;
     }
@@ -328,21 +352,29 @@ h4 {
     object-fit: cover;
     z-index: -1;
   }
+
   h1,
   h2 {
     text-align: center;
   }
+
   h2 {
+    opacity: 0;
+    animation: showTop 1s 2s forwards;
+
     @media (max-width: 768px) {
       font-size: 28px;
     }
   }
+
   .button {
     margin-top: 30px;
     padding: 20px 80px;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     cursor: pointer;
+    opacity: 0;
+    animation: showTop 1s 2.5s forwards;
 
     &:hover {
       padding: 20px 100px;
@@ -353,7 +385,9 @@ h4 {
   .overlay1 {
     color: white;
     mix-blend-mode: overlay;
-    opacity: 0.7;
+    opacity: 0;
+    animation: showTop 0.6s 1.5s forwards;
+
     @media (max-width: 524px) {
       font-size: 38px;
       font-weight: 700;
@@ -363,6 +397,7 @@ h4 {
 
 .what-are-we-doing {
   margin-top: 180px;
+
   @media (max-width: 768px) {
     margin-top: 100px;
   }
@@ -372,12 +407,14 @@ h4 {
     justify-content: space-between;
     gap: 20px;
     opacity: 0.2;
+
     @media (max-width: 768px) {
       flex-direction: column;
     }
 
     h4 {
       text-wrap: nowrap;
+
       @media (max-width: 1024px) {
         text-wrap: wrap;
         font-size: 18px;
@@ -387,10 +424,12 @@ h4 {
 
   p {
     margin-top: 40px;
+
     @media (max-width: 768px) {
       margin-top: 10px;
       margin-right: 10px;
     }
+
     @media (max-width: 1024px) {
       text-wrap: wrap;
       font-size: 14px;
@@ -400,6 +439,7 @@ h4 {
 
 .about-us {
   margin-top: 140px;
+
   @media (max-width: 768px) {
     margin-top: 80px;
   }
@@ -410,6 +450,7 @@ h4 {
 
   .flex {
     display: flex;
+
     @media (max-width: 880px) {
       flex-direction: column;
     }
@@ -419,6 +460,7 @@ h4 {
       width: 50%;
       height: 720px;
       padding: 40px;
+
       @media (max-width: 880px) {
         width: 100%;
         height: 400px;
@@ -444,6 +486,7 @@ h4 {
 
     .masters {
       display: flex;
+
       .text {
         margin-top: auto;
       }
@@ -461,18 +504,22 @@ h4 {
       flex-direction: column;
       margin-top: 80px;
     }
+
     @media (max-width: 1364px) {
       align-items: start;
     }
+
     @media (max-width: 748px) {
       align-items: center;
     }
+
     .master-img {
       @media (max-width: 1364px) {
         width: 50%;
         height: 100%;
         align-items: start;
       }
+
       @media (max-width: 748px) {
         width: 300px;
         height: 400px;
@@ -510,6 +557,7 @@ h4 {
 
 .about-us-item {
   position: relative;
+
   .team-hover {
     position: absolute;
     top: 0;
@@ -518,9 +566,11 @@ h4 {
     transition: opacity 0.6s ease, transform 0.6s ease;
     transform: scale(0.9);
   }
+
   &:hover .team-image {
     opacity: 0;
   }
+
   &:hover .team-hover {
     opacity: 1;
     transform: scale(1);
@@ -530,6 +580,7 @@ h4 {
 .services {
   margin-top: 140px;
   padding-bottom: 40px;
+
   @media (max-width: 768px) {
     margin-top: 80px;
   }
@@ -542,6 +593,7 @@ h4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+
     @media (max-width: 900px) {
       display: flex;
       flex-direction: row;
@@ -565,10 +617,12 @@ h4 {
       height: 400px;
       gap: 20px;
       overflow: hidden;
+
       @media (max-width: 900px) {
         width: 340px;
         height: 310px;
       }
+
       @media (max-width: 370px) {
         width: 300px;
       }
@@ -582,6 +636,7 @@ h4 {
       h3 {
         font-weight: 400;
         max-width: 580px;
+
         @media (max-width: 524px) {
           font-size: 24px;
         }
@@ -616,6 +671,7 @@ h4 {
       align-items: center;
       gap: 60px;
       margin-top: 20px;
+
       @media (max-width: 900px) {
         flex-direction: column;
         gap: 20px;
@@ -625,25 +681,31 @@ h4 {
 
       .price {
         text-wrap: nowrap;
+
         @media (max-width: 524px) {
           font-weight: 600;
         }
+
         @media (max-width: 900px) {
           font-style: italic;
         }
       }
     }
+
     .button-desc {
       @media (max-width: 900px) {
         display: none;
       }
     }
+
     .button-mobile {
       display: none;
+
       @media (max-width: 900px) {
         display: block;
         margin: 40px auto;
         text-align: center;
+
         .button {
           width: 200px;
           height: 60px;
@@ -669,10 +731,12 @@ h4 {
       font-size: 22px;
       font-weight: 500;
     }
+
     .ticket-disc {
       font-weight: 600;
       line-height: 150%;
       text-wrap: nowrap;
+
       @media (max-width: 1500px) {
         text-wrap: wrap;
         text-align: center;
@@ -683,6 +747,7 @@ h4 {
     .image {
       background: $white;
       padding: 40px 40px 20px 40px;
+
       @media (max-width: 568px) {
         padding: 20px;
       }
@@ -717,6 +782,7 @@ h4 {
     justify-content: center;
     margin: 20px 0;
     gap: 40px;
+
     @media (max-width: 1364px) {
       justify-content: start;
       overflow-x: auto;
@@ -727,15 +793,18 @@ h4 {
   .button {
     width: 100%;
   }
+
   .flex-mas {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 20px 0;
+
     .number-mas {
       font-size: 22px;
       font-weight: 500;
     }
+
     .price-mas {
       font-weight: 500;
     }
@@ -750,9 +819,11 @@ h4 {
       margin: 0 auto;
     }
   }
+
   .flex {
     display: flex;
     gap: 40px;
+
     @media (max-width: 1264px) {
       flex-direction: column;
     }
@@ -761,6 +832,7 @@ h4 {
   .title {
     margin-bottom: 40px;
     margin-top: 140px;
+
     @media (max-width: 768px) {
       margin-top: 80px;
       margin-bottom: 20px;
@@ -769,6 +841,7 @@ h4 {
 
   img {
     height: 600px;
+
     @media (max-width: 1264px) {
       height: 100%;
     }
@@ -779,6 +852,7 @@ h4 {
 
     h4 {
       margin: 20px 0;
+
       @media (max-width: 1264px) {
         margin: 40px 0 20px 0;
       }
@@ -797,8 +871,10 @@ h4 {
       display: none;
     }
   }
+
   .certificate-phone {
     display: none;
+
     @media (max-width: 524px) {
       margin: 0 auto;
       display: block;
@@ -811,6 +887,7 @@ h4 {
 .galery {
   margin-top: 180px;
   margin-bottom: 180px;
+
   @media (max-width: 768px) {
     margin-top: 80px;
     margin-bottom: 80px;
@@ -825,25 +902,30 @@ h4 {
     gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
+
     @media (max-width: 1000px) {
       justify-content: start;
       flex-wrap: nowrap;
       overflow-x: auto;
       padding-bottom: 20px;
     }
+
     .galery-item {
       text-align: center;
     }
   }
 }
+
 .footer {
   width: 100%;
   background-color: #fff;
+
   .footer-logo {
     @media (max-width: 524px) {
       margin: 0 auto;
     }
   }
+
   .container {
     padding: 80px 0;
     color: #1b1c1b;
@@ -851,25 +933,31 @@ h4 {
     font-size: 16px;
     justify-content: space-between;
     flex-wrap: wrap;
+
     @media (max-width: 1000px) {
       gap: 30px;
     }
+
     @media (max-width: 524px) {
       padding: 40px 0;
     }
+
     .nav {
       display: flex;
       gap: 101px;
       flex-wrap: wrap;
       height: fit-content;
+
       @media (max-width: 900px) {
         gap: 30px;
       }
+
       @media (max-width: 432px) {
         gap: 130px;
         flex-wrap: nowrap;
         width: 100%;
       }
+
       .nav__1,
       .nav__2,
       .nav__3 {
@@ -877,18 +965,22 @@ h4 {
         flex-direction: column;
         gap: 20px;
       }
+
       .nav__3 {
         align-self: flex-end;
       }
+
       .offerta {
         @media (max-width: 432px) {
           display: none;
         }
       }
+
       a {
         color: #1b1c1b;
         font-weight: 500;
       }
+
       a {
         position: relative;
 
@@ -908,31 +1000,38 @@ h4 {
         }
       }
     }
+
     .contacts {
       display: flex;
       flex-direction: column;
       gap: 40px;
+
       @media (max-width: 524px) {
         margin-top: 40px;
       }
+
       .contacts-title {
         margin-bottom: 20px;
         font-weight: 600;
+
         @media (max-width: 524px) {
           font-weight: 700;
         }
       }
+
       .contacts-title-none {
         @media (max-width: 524px) {
           display: none;
         }
       }
+
       .contact {
         display: flex;
         flex-direction: column;
         gap: 10px;
         font-weight: 500;
       }
+
       .social {
         .social_imgas {
           display: flex;
@@ -941,19 +1040,24 @@ h4 {
       }
     }
   }
+
   .offerta2 {
     color: $black;
     display: none;
+
     @media (max-width: 432px) {
       display: block;
     }
   }
 }
+
 .line-contact {
   display: none;
+
   @media (max-width: 524px) {
     display: block;
     margin-bottom: 10px;
+
     &::before {
       content: "";
       display: block;
@@ -963,6 +1067,7 @@ h4 {
     }
   }
 }
+
 .popup {
   display: none;
   position: fixed;
@@ -976,6 +1081,7 @@ h4 {
   margin: 0 auto;
   overflow-y: auto;
   max-height: calc(100vh - 50px);
+
   @media (max-width: 900px) {
     padding: 10px;
   }
@@ -987,10 +1093,12 @@ h4 {
   flex-direction: column;
   width: 640px;
   margin: 80px 0 40px 0;
+
   @media (max-width: 900px) {
     width: 500px;
     margin: 80px 0 40px 0;
   }
+
   @media (max-width: 540px) {
     width: 270px;
   }
@@ -1028,16 +1136,19 @@ h4 {
   z-index: 999;
   display: none;
 }
+
 #popupOfferta {
   .popup-content {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
     h4 {
       margin-bottom: 20px;
       font-weight: 500;
       line-height: 140%;
     }
+
     p {
       font-weight: 500;
       line-height: 150%;
@@ -1055,6 +1166,7 @@ h4 {
   // transform: translate(-50%, -50%);
   background-color: white;
   z-index: 9999;
+
   // padding: 44px;
   // margin: 0 auto;
   // overflow-y: auto;
@@ -1063,6 +1175,7 @@ h4 {
     padding: 10px;
   }
 }
+
 .popup2 {
   h2 {
     margin-top: 40px;
@@ -1072,6 +1185,7 @@ h4 {
     font-size: 54px;
     line-height: 150%;
     font-weight: 500;
+
     @media (max-width: 584px) {
       font-size: 28px;
       margin-top: 40px;
@@ -1086,13 +1200,16 @@ h4 {
   flex-direction: column;
   width: 100%;
   margin: 80px 0 40px 0;
+
   @media (max-width: 900px) {
     width: 100%;
     margin: 80px 0 40px 0;
   }
+
   @media (max-width: 540px) {
     width: 100%;
   }
+
   .popup-img {
     margin: 0 auto;
     width: 130px;
@@ -1131,23 +1248,28 @@ h4 {
   padding: 20px;
   width: 100%;
 }
+
 input {
   border: none;
   border-bottom: 1px solid $black;
+
   &:focus {
     border: none;
   }
 }
+
 .inputs {
   display: flex;
   flex-direction: column;
   gap: 80px;
   margin: 80px 0;
+
   @media (max-width: 900px) {
     margin: 40px 0;
     gap: 40px;
   }
 }
+
 .popup button {
   width: 100%;
   height: 60px;
@@ -1161,6 +1283,7 @@ input {
 .popup button:hover {
   background-color: $light-grey;
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -1172,16 +1295,19 @@ input {
   z-index: 999;
   display: none;
 }
+
 #popupOfferta {
   .popup-content {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
     h4 {
       margin-bottom: 20px;
       font-weight: 500;
       line-height: 140%;
     }
+
     p {
       font-weight: 500;
       line-height: 150%;
@@ -1256,7 +1382,7 @@ input {
       flex-direction: column;
       gap: 40px;
       display: none;
-      
+
       @media (max-width: 800px) {
         padding: 30px;
       }
@@ -1380,6 +1506,7 @@ input {
     }
   }
 }
+
 .popup {
 
   &__close {
@@ -1393,7 +1520,57 @@ input {
 
   &__logo {
 
-    &_icon {
-    }
+    &_icon {}
+  }
+}
+
+.homeAnim1 {
+  opacity: 0;
+  animation: showBottom 1s forwards;
+}
+
+.homeAnim2 {
+  opacity: 0;
+  animation: showTop 1s 0.5s forwards;
+}
+
+.homeAnim3 {
+  opacity: 0;
+  animation: showRight 1s 1s forwards;
+}
+
+@keyframes showTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 100;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes showBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 100;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes showRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 100;
+    transform: translateX(0px);
   }
 }

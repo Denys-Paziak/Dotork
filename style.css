@@ -309,12 +309,17 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -1;
 }
 .hero h1,
 .hero h2 {
   text-align: center;
+}
+.hero h2 {
+  opacity: 0;
+  animation: showTop 1s 2s forwards;
 }
 @media (max-width: 768px) {
   .hero h2 {
@@ -325,8 +330,11 @@ h4 {
   margin-top: 30px;
   padding: 20px 80px;
   background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   cursor: pointer;
+  opacity: 0;
+  animation: showTop 1s 2.5s forwards;
 }
 .hero .button:hover {
   padding: 20px 100px;
@@ -335,7 +343,8 @@ h4 {
 .hero .overlay1 {
   color: white;
   mix-blend-mode: overlay;
-  opacity: 0.7;
+  opacity: 0;
+  animation: showTop 0.6s 1.5s forwards;
 }
 @media (max-width: 524px) {
   .hero .overlay1 {
@@ -425,7 +434,8 @@ h4 {
   right: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -1;
 }
 .about-us .flex .about-us-item .text p {
@@ -587,7 +597,8 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -1;
   transition: 0.6s;
 }
@@ -684,7 +695,8 @@ h4 {
   min-height: 440px;
   width: 100%;
   background: #1b1c1b;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .season-tickets .ticket .image .text {
   display: flex;
@@ -859,6 +871,7 @@ h4 {
   display: flex;
   gap: 101px;
   flex-wrap: wrap;
+  height: -moz-fit-content;
   height: fit-content;
 }
 @media (max-width: 900px) {
@@ -1036,7 +1049,8 @@ h4 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   z-index: 999;
   display: none;
 }
@@ -1160,7 +1174,8 @@ input:focus {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   z-index: 999;
   display: none;
 }
@@ -1266,6 +1281,11 @@ input:focus {
   outline: none;
   margin-bottom: 80px;
 }
+.order__form_item::-moz-placeholder {
+  font-size: 18px;
+  font-weight: 500;
+  color: light grey;
+}
 .order__form_item::placeholder {
   font-size: 18px;
   font-weight: 500;
@@ -1369,4 +1389,49 @@ input:focus {
   cursor: pointer;
   width: 22px;
   height: 22px;
+}
+.homeAnim1 {
+  opacity: 0;
+  animation: showBottom 1s forwards;
+}
+
+.homeAnim2 {
+  opacity: 0;
+  animation: showTop 1s 0.5s forwards;
+}
+
+.homeAnim3 {
+  opacity: 0;
+  animation: showRight 1s 1s forwards;
+}
+
+@keyframes showTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(0px);
+  }
+}
+@keyframes showBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(0px);
+  }
+}
+@keyframes showRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 100;
+    transform: translateX(0px);
+  }
 }/*# sourceMappingURL=style.css.map */

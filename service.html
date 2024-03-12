@@ -1,356 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dotork</title>
-    <link rel="stylesheet" href="service.css" />
-  </head>
-  <body>
-    <header class="header-container">
-      <div class="header top-header">
-        <input type="checkbox" name="" id="check" />
-        <!-- <label for="check" class="icons">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dotork</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="service.css" />
+</head>
+
+<body>
+  <header class="header-container">
+    <div class="header top-header">
+      <input type="checkbox" name="" id="check" />
+      <!-- <label for="check" class="icons">
           <img src="./img/ic menu-new.svg" alt="" id="menu-icon" />
           <img src="./img/ic cross_menu.svg" alt="" id="menu-close" />
         </label> -->
-        <div>
-          <img src="./img/ic menu-new.svg" alt="" id="menu-icon"  onclick="toggleBurgerMenu()" />
-        </div>
-
-        <div class="navbar" id="navbar">
-          <nav class="nav-items">
-            <a href="./">Головна</a>
-            <a href="./#about">Про нас</a>
-            <a href="./#services">Послуги</a>
-            <a href="./#tickets">Абонемент</a>
-            <a href="./#certificate">Сертифікати</a>
-            <a href="./#galery">Галерея</a>
-          </nav>
-          <div class="left-menu">
-            <img
-              src="img/volume-off.svg"
-              alt="sound"
-              id="soundToggle"
-              onclick="toggleSound()"
-              class="soundToggle"
-            />
-            <audio id="backgroundMusic">
-              <source
-                src="./img/alyona-alyona-jerry-heil-teresa-maria-(meloua.com).mp3"
-                type="audio/mpeg"
-              />
-              Your browser does not support the audio element.
-            </audio>
-            <button class="button">Забронювати</button>
-            <a href=""><img src="img/ic insta.svg" alt="insta" /></a>
-            <a href=""><img src="img/ic phone.svg" alt="phone" /></a>
-          </div>
-        </div>
-        <img
-          src="img/volume-off.svg"
-          alt="sound"
-          id="soundToggle"
-          onclick="toggleSound()"
-          class="logo-image"
-        />
+      <div>
+        <img src="./img/ic menu-new.svg" alt="" id="menu-icon" onclick="toggleBurgerMenu()" />
       </div>
-    </header>
-    <main>
-      <section class="navigation container">
-        <div class="navigation-items">
-          <a href="/">Головна сторінка</a>
-          <span>/</span>
-          <a href="#">Загальний</a>
-        </div>
-      </section>
-      <div class="image-bw">
-        <img src="./img/logo bw.svg" alt="" />
-      </div>
-      <section class="service">
-        <div class="flex">
-          <img
-            class="service-image"
-            src="img/services/загальний.jpg"
-            alt="team"
-          />
-          <div class="service__description service-item">
-            <div class="title_about">
-              <div class="service__title">Загальний</div>
-              <div class="service_about">
-                Глибокий масаж усього тіла, спрямований на розслаблення м'язів,
-                покращення кровообігу та еластичності тканин. Процедура допоможе
-                відновити сили та зняти напругу. 
-              </div>
-            </div>
-            <div class="result_indication">
-              <div class="result">
-                <div class="item-title">Результат:</div>
-                <div class="item-desc">
-                  <div>1. Розвиток фізичної та розумової витривалості</div>
-                  <div>2. Відновлення після травм</div>
-                  <div>3. Підвищення відтоку лімфи для очищення організму</div>
-                </div>
-              </div>
-              <div class="indication">
-                <div class="item-title">Показання:</div>
-                <div class="item-desc">
-                  <div>1. Стрес</div>
-                  <div>2. Напруга м'язів</div>
-                  <div>3. Погіршення кровообігу</div>
-                  <div>4. Втома</div>
-                </div>
-              </div>
-            </div>
-            <div class="line"></div>
-            <div class="prices">
-              <div>60 хв. / 1000 грн.</div>
-              <div>90 хв. / 1300 грн.</div>
-              <div>120 хв. / 1600 грн.</div>
-            </div>
-            <button class="main-button button" onclick="openOrderModalWindow()">
-              ЗАПИСАТИСЬ
-            </button>
 
-            <div class="order__popup">
-              <div class="order__popup_wrapper">
-                <div class="order__popup_close">
-                  <img onclick="closeOrderModalWindow()" class="popup__close_icon" src="img/order-close-icon.png" alt="">
-                </div>
-                <div class="order__popup_logo">
-                  <img class="popup__logo_icon" src="img/order-logo.png" alt="">
-                </div>
-                <div class="order__popup_form">
-                  <input type="text" class="order__form_item order__form_name" placeholder="Ім'я">
-                  <input type="number" class="order__form_item order__form_phone" placeholder="Номер телефону">
-                  <button class="order__form_button" type="button" onclick="getDataFromOrder()">Відправити</button>
-                  <p class="order__form_wrong">Будь ласка заповніть всі поля</p>
-                </div>
-                <div class="order__popup_info">
-                  <h2 class="order__info_title">
-                    Дякуємо, що обрали DOTORK STUDIO
-                  </h2>
-                  <p class="order__info_text">
-                    Наш менеджер зв’яжеться з Вами для уточнення деталей
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-      <div class="service-bg"></div>
-    </main>
-    <div id="overlay" class="overlay" onclick="closeOrderModalWindow()"></div>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-logo">
-          <img src="./img/logo-black.svg" alt="" />
-        </div>
-        <nav class="nav">
-          <div class="nav__1">
-            <a href="#">Головна</a>
-            <a href="#about">Про нас</a>
-            <a href="#galery">Галерея</a>
-          </div>
-          <div class="nav__2">
-            <a href="#services">Послуги</a>
-            <a href="#tickets">Абонемент</a>
-            <a href="#certificate">Сертифікати</a>
-          </div>
-          <div class="nav__3">
-            <a class="offerta" href="#" onclick="openPopupOfferta()"
-              >Договір оферти</a
-            >
-          </div>
+      <div class="navbar" id="navbar">
+        <nav class="nav-items">
+          <a href="index.html">Головна</a>
+          <a href="index.html/#about">Про нас</a>
+          <a href="index.html/#services">Послуги</a>
+          <a href="index.html/#tickets">Абонемент</a>
+          <a href="index.html/#certificate">Сертифікати</a>
+          <a href="index.html/#galery">Галерея</a>
         </nav>
-        <div id="popupOfferta" class="popup">
-          <div class="popup-content" style="text-align: start">
-            <!-- <span class="close" onclick="closePopupOfferta()">&times;</span> -->
-            <div class="close" onclick="closePopupOfferta()"><img src="./img/ic cross_menu.svg" alt="close icon"></div>
-            <div>
-              <h4>Збір і використання персональних даних</h4>
-              <p>
-                Ми збираємо та використовуємо ваші персональні дані тільки в
-                разі вашої добровільної згоди. При згоді з цим ви дозволяєте нам
-                збирати та використовувати такі дані: ім'я та прізвище,
-                електронна пошта, номер телефону. Збір та обробка ваших даних
-                проводиться відповідно до законів, що діють на території
-                Європейського Союзу та в державі Україна.
-              </p>
-            </div>
-            <div>
-              <h4>Зберігання даних, зміна та видалення</h4>
-              <p>
-                Користувач, який надав свої персональні дані сайту
-                demassage.com.ua, має право на їхню зміну і видалення, а також
-                на відкликання своєї згоди з їхнім використанням. Термін,
-                протягом якого будуть зберігатися ваші персональні дані: час,
-                необхідний для використання даних для основної діяльності сайту.
-                При завершенні використання ваших даних адміністрація сайту
-                видаляє їх. Для доступу до своїх персональних даних ви можете
-                зв'язатися з адміністрацією сайту за такою адресою: Студія De
-                Massage, ЖК Авалон, вул. В. Чорновола 16-Е, м. Львів. Ми можемо
-                передавати ваші особисті дані третій стороні тільки за вашою
-                добровільною згодою, якщо вони були передані, то зміну даних в
-                інших організаціях, не пов'язаних з нами, ми здійснити не
-                можемо.
-              </p>
-            </div>
-            <div>
-              <h4>Використання технічних даних під час відвідування сайту</h4>
-              <p>
-                Під час відвідування вами сайту demassage.com.ua у базі даних
-                зберігаються записи про вашу IP-адресу, час відвідування,
-                налаштування браузера, операційну систему, а також інша технічна
-                інформація, необхідна для коректного відображення вмісту сайту.
-                За цими даними нам неможливо ідентифікувати особу відвідувача.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="contacts">
-          <div class="contact">
-            <div class="contacts-title">КОНТАКТИ</div>
-            <div>вул. Василя Тютюнника, 28А, Київ</div>
-            <div>Працюємо з 09:00 до 21:00</div>
-            <div style="font-weight: 700" onclick="copyPhoneNumber()">
-              +380 95 000 29 39
-            </div>
-          </div>
-          <div class="line-contact"></div>
-          <div class="social">
-            <div class="contacts-title contacts-title-none">
-              СОЦІАЛЬНІ МЕРЕЖІ
-            </div>
-            <div class="social_imgas">
-              <img class="social__imgas_item" src="./img/ic inst_footer.svg" alt="" />
-              <img class="social__imgas_item" src="img/ic fb_footer.svg" alt="" />
-              <img class="social__imgas_item" src="img/ic tiktok_footer.svg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div>
-          <a class="offerta2" href="#" onclick="openPopupOfferta()"
-            >Договір оферти</a
-          >
+        <div class="left-menu">
+          <img src="img/volume-off.svg" alt="sound" id="soundToggle" onclick="toggleSound()" class="soundToggle" />
+          <audio id="backgroundMusic">
+            <source src="./img/alyona-alyona-jerry-heil-teresa-maria-(meloua.com).mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <button class="button">Забронювати</button>
+          <a href=""><img src="img/ic insta.svg" alt="insta" /></a>
+          <a href=""><img src="img/ic phone.svg" alt="phone" /></a>
         </div>
       </div>
-    </footer>
-    <script>
-      window.addEventListener("scroll", function () {
-        var headerContainer = document.querySelector(".header-container");
-        if (window.scrollY > 0) {
-          headerContainer.style.background = "#1b1c1b";
-        } else {
-          headerContainer.style.background = "transparent";
-        }
-      });
-      function openFirstPopup() {
-        document.getElementById("popup1").style.display = "block";
-        document.getElementById("overlay").style.display = "block";
+      <img src="img/volume-off.svg" alt="sound" id="soundToggle" onclick="toggleSound()" class="logo-image" />
+    </div>
+  </header>
+  <main>
+    <section class="navigation container">
+      <div class="navigation-items" data-aos="fade-up" data-aos-duration="3000">
+        <a href="/">Головна сторінка</a>
+        <span>/</span>
+        <a href="#">Загальний</a>
+      </div>
+    </section>
+    <div class="image-bw" data-aos="fade-up" data-aos-duration="3000">
+      <img src="./img/logo bw.svg" alt="" />
+    </div>
+    <section class="service">
+      <div class="flex">
+        <img class="service-image" src="img/services/загальний.jpg" alt="team" data-aos="fade-up"
+          data-aos-duration="3000" />
+        <div class="service__description service-item">
+          <div class="title_about" data-aos="fade-up" data-aos-duration="3000">
+            <div class="service__title">Загальний</div>
+            <div class="service_about">
+              Глибокий масаж усього тіла, спрямований на розслаблення м'язів,
+              покращення кровообігу та еластичності тканин. Процедура допоможе
+              відновити сили та зняти напругу. 
+            </div>
+          </div>
+          <div class="result_indication">
+            <div class="result" data-aos="fade-up" data-aos-duration="3000">
+              <div class="item-title">Результат:</div>
+              <div class="item-desc">
+                <div>1. Розвиток фізичної та розумової витривалості</div>
+                <div>2. Відновлення після травм</div>
+                <div>3. Підвищення відтоку лімфи для очищення організму</div>
+              </div>
+            </div>
+            <div class="indication" data-aos="fade-up" data-aos-duration="3000">
+              <div class="item-title">Показання:</div>
+              <div class="item-desc">
+                <div>1. Стрес</div>
+                <div>2. Напруга м'язів</div>
+                <div>3. Погіршення кровообігу</div>
+                <div>4. Втома</div>
+              </div>
+            </div>
+          </div>
+          <div class="line" data-aos="fade-up" data-aos-duration="3000"></div>
+          <div class="prices" data-aos="fade-up" data-aos-duration="3000">
+            <div>60 хв. / 1000 грн.</div>
+            <div>90 хв. / 1300 грн.</div>
+            <div>120 хв. / 1600 грн.</div>
+          </div>
+          <button class="main-button button" onclick="openOrderModalWindow()" data-aos="fade-up"
+            data-aos-duration="3000">
+            ЗАПИСАТИСЬ
+          </button>
+
+          <div class="order__popup">
+            <div class="order__popup_wrapper">
+              <div class="order__popup_close">
+                <img onclick="closeOrderModalWindow()" class="popup__close_icon" src="img/order-close-icon.png" alt="">
+              </div>
+              <div class="order__popup_logo">
+                <img class="popup__logo_icon" src="img/order-logo.png" alt="">
+              </div>
+              <div class="order__popup_form">
+                <input type="text" class="order__form_item order__form_name" placeholder="Ім'я">
+                <input type="number" class="order__form_item order__form_phone" placeholder="Номер телефону">
+                <button class="order__form_button" type="button" onclick="getDataFromOrder()">Відправити</button>
+                <p class="order__form_wrong">Будь ласка заповніть всі поля</p>
+              </div>
+              <div class="order__popup_info">
+                <h2 class="order__info_title">
+                  Дякуємо, що обрали DOTORK STUDIO
+                </h2>
+                <p class="order__info_text">
+                  Наш менеджер зв’яжеться з Вами для уточнення деталей
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <div class="service-bg" data-aos="fade-up" data-aos-duration="3000"></div>
+  </main>
+  <div id="overlay" class="overlay" onclick="closeOrderModalWindow()"></div>
+  <footer class="footer" data-aos="fade-up" data-aos-duration="3000">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="./img/logo-black.svg" alt="" />
+      </div>
+      <nav class="nav">
+        <div class="nav__1">
+          <a href="#">Головна</a>
+          <a href="#about">Про нас</a>
+          <a href="#galery">Галерея</a>
+        </div>
+        <div class="nav__2">
+          <a href="#services">Послуги</a>
+          <a href="#tickets">Абонемент</a>
+          <a href="#certificate">Сертифікати</a>
+        </div>
+        <div class="nav__3">
+          <a class="offerta" href="#" onclick="openPopupOfferta()">Договір оферти</a>
+        </div>
+      </nav>
+      <div id="popupOfferta" class="popup">
+        <div class="popup-content" style="text-align: start">
+          <!-- <span class="close" onclick="closePopupOfferta()">&times;</span> -->
+          <div class="close" onclick="closePopupOfferta()"><img src="./img/ic cross_menu.svg" alt="close icon"></div>
+          <div>
+            <h4>Збір і використання персональних даних</h4>
+            <p>
+              Ми збираємо та використовуємо ваші персональні дані тільки в
+              разі вашої добровільної згоди. При згоді з цим ви дозволяєте нам
+              збирати та використовувати такі дані: ім'я та прізвище,
+              електронна пошта, номер телефону. Збір та обробка ваших даних
+              проводиться відповідно до законів, що діють на території
+              Європейського Союзу та в державі Україна.
+            </p>
+          </div>
+          <div>
+            <h4>Зберігання даних, зміна та видалення</h4>
+            <p>
+              Користувач, який надав свої персональні дані сайту
+              demassage.com.ua, має право на їхню зміну і видалення, а також
+              на відкликання своєї згоди з їхнім використанням. Термін,
+              протягом якого будуть зберігатися ваші персональні дані: час,
+              необхідний для використання даних для основної діяльності сайту.
+              При завершенні використання ваших даних адміністрація сайту
+              видаляє їх. Для доступу до своїх персональних даних ви можете
+              зв'язатися з адміністрацією сайту за такою адресою: Студія De
+              Massage, ЖК Авалон, вул. В. Чорновола 16-Е, м. Львів. Ми можемо
+              передавати ваші особисті дані третій стороні тільки за вашою
+              добровільною згодою, якщо вони були передані, то зміну даних в
+              інших організаціях, не пов'язаних з нами, ми здійснити не
+              можемо.
+            </p>
+          </div>
+          <div>
+            <h4>Використання технічних даних під час відвідування сайту</h4>
+            <p>
+              Під час відвідування вами сайту demassage.com.ua у базі даних
+              зберігаються записи про вашу IP-адресу, час відвідування,
+              налаштування браузера, операційну систему, а також інша технічна
+              інформація, необхідна для коректного відображення вмісту сайту.
+              За цими даними нам неможливо ідентифікувати особу відвідувача.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="contacts">
+        <div class="contact">
+          <div class="contacts-title">КОНТАКТИ</div>
+          <div>вул. Василя Тютюнника, 28А, Київ</div>
+          <div>Працюємо з 09:00 до 21:00</div>
+          <div style="font-weight: 700" onclick="copyPhoneNumber()">
+            +380 95 000 29 39
+          </div>
+        </div>
+        <div class="line-contact"></div>
+        <div class="social">
+          <div class="contacts-title contacts-title-none">
+            СОЦІАЛЬНІ МЕРЕЖІ
+          </div>
+          <div class="social_imgas">
+            <img class="social__imgas_item" src="./img/ic inst_footer.svg" alt="" />
+            <img class="social__imgas_item" src="img/ic fb_footer.svg" alt="" />
+            <img class="social__imgas_item" src="img/ic tiktok_footer.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <a class="offerta2" href="#" onclick="openPopupOfferta()">Договір оферти</a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      var headerContainer = document.querySelector(".header-container");
+      if (window.scrollY > 0) {
+        headerContainer.style.background = "#1b1c1b";
+      } else {
+        headerContainer.style.background = "transparent";
+      }
+    });
+    function openFirstPopup() {
+      document.getElementById("popup1").style.display = "block";
+      document.getElementById("overlay").style.display = "block";
+    }
+
+    function closeFirstPopup() {
+      document.getElementById("popup1").style.display = "none";
+      document.getElementById("overlay").style.display = "none";
+    }
+    function openSecondPopup() {
+      document.getElementById("popup2").style.display = "block";
+      document.getElementById("overlay").style.display = "block";
+      document.getElementById("popup1").style.display = "none";
+    }
+
+    function closeSecondPopup() {
+      document.getElementById("popup2").style.display = "none";
+      document.getElementById("popup1").style.display = "none";
+      document.getElementById("overlay").style.display = "none";
+    }
+    function openPopupOfferta() {
+      document.getElementById("popupOfferta").style.display = "block";
+      document.getElementById("overlay").style.display = "block";
+    }
+
+    function closePopupOfferta() {
+      document.getElementById("popupOfferta").style.display = "none";
+      document.getElementById("overlay").style.display = "none";
+    }
+
+    const soundToggle = document.querySelectorAll("#soundToggle");
+    const backgroundMusic = document.getElementById("backgroundMusic");
+
+    function toggleSound() {
+      if (backgroundMusic.paused) {
+        backgroundMusic.play();
+        console.log(soundToggle);
+        soundToggle.forEach((soundItem) => {
+          soundItem.src = "img/volume-on.svg";
+        });
+      } else {
+        console.log(soundToggle)
+        backgroundMusic.pause();
+        soundToggle.forEach((soundItem) => {
+          soundItem.src = "img/volume-off.svg";
+        });
+      }
+    }
+
+    const navbar = document.querySelector('.navbar');
+    const menuIcon = document.querySelector('#menu-icon');
+    const headerMenuItems = document.querySelectorAll('.header__menu_item');
+    let isBurgerMenuOpen = false;
+
+    function toggleBurgerMenu() {
+      isBurgerMenuOpen = !isBurgerMenuOpen;
+
+      if (isBurgerMenuOpen) {
+        menuIcon.src = "./img/ic cross_menu.svg";
+        navbar.style.left = '0';
+        console.log(menuIcon);
+      } else {
+        navbar.style.left = '-100%';
+        menuIcon.src = './img/ic menu-new.svg';
+      }
+    }
+
+    const orderPopup = document.querySelector('.order__popup');
+    const orderFormName = document.querySelector('.order__form_name');
+    const orderFormPhone = document.querySelector('.order__form_phone');
+    const orderPopupForm = document.querySelector('.order__popup_form');
+    const orderPopupInfo = document.querySelector('.order__popup_info');
+    const orderFormWrong = document.querySelector('.order__form_wrong');
+    const overlay = document.querySelector('.overlay');
+
+    function getDataFromOrder() {
+      if (orderFormName.value === '' || orderFormPhone.value === '') {
+        orderFormWrong.style.display = 'block';
+      } else {
+        orderFormName.value = '';
+        orderFormPhone.value = '';
+        orderPopupForm.style.display = 'none';
+        orderPopupInfo.style.display = 'block';
+        console.log(orderFormName.value);
+        console.log(orderFormPhone.value);
       }
 
-      function closeFirstPopup() {
-        document.getElementById("popup1").style.display = "none";
-        document.getElementById("overlay").style.display = "none";
-      }
-      function openSecondPopup() {
-        document.getElementById("popup2").style.display = "block";
-        document.getElementById("overlay").style.display = "block";
-        document.getElementById("popup1").style.display = "none";
-      }
+    }
 
-      function closeSecondPopup() {
-        document.getElementById("popup2").style.display = "none";
-        document.getElementById("popup1").style.display = "none";
-        document.getElementById("overlay").style.display = "none";
-      }
-      function openPopupOfferta() {
-        document.getElementById("popupOfferta").style.display = "block";
-        document.getElementById("overlay").style.display = "block";
-      }
+    function closeOrderModalWindow() {
+      orderPopup.style.display = 'none';
+      overlay.style.display = 'none';
+      orderPopupForm.style.display = 'block';
+      orderPopupInfo.style.display = 'none';
+      orderFormWrong.style.display = 'none';
+    }
 
-      function closePopupOfferta() {
-        document.getElementById("popupOfferta").style.display = "none";
-        document.getElementById("overlay").style.display = "none";
-      }
+    function openOrderModalWindow() {
+      orderPopup.style.display = 'block';
+      overlay.style.display = 'block';
+      orderPopupForm.style.display = 'block';
+      orderPopupInfo.style.display = 'none';
+      orderFormWrong.style.display = 'none';
+    }
+  </script>
+</body>
 
-      const soundToggle = document.querySelectorAll("#soundToggle");
-      const backgroundMusic = document.getElementById("backgroundMusic");
-
-      function toggleSound() {
-        if (backgroundMusic.paused) {
-          backgroundMusic.play();
-          console.log(soundToggle);
-          soundToggle.forEach((soundItem) => {
-            soundItem.src = "img/volume-on.svg";
-          });
-        } else {
-          console.log(soundToggle)
-          backgroundMusic.pause();
-          soundToggle.forEach((soundItem) => {
-            soundItem.src = "img/volume-off.svg";
-          });
-        }
-      }
-
-      const navbar = document.querySelector('.navbar');
-      const menuIcon = document.querySelector('#menu-icon');
-      const headerMenuItems = document.querySelectorAll('.header__menu_item');
-      let isBurgerMenuOpen = false;
-
-      function toggleBurgerMenu() {
-        isBurgerMenuOpen = !isBurgerMenuOpen;
-        
-        if (isBurgerMenuOpen) {
-          menuIcon.src = "./img/ic cross_menu.svg";
-          navbar.style.left = '0';
-          console.log(menuIcon);
-        } else {
-          navbar.style.left = '-100%';
-          menuIcon.src = './img/ic menu-new.svg';
-        }
-      }
-
-      const orderPopup = document.querySelector('.order__popup');
-      const orderFormName = document.querySelector('.order__form_name');
-      const orderFormPhone = document.querySelector('.order__form_phone');
-      const orderPopupForm = document.querySelector('.order__popup_form');
-      const orderPopupInfo = document.querySelector('.order__popup_info');
-      const orderFormWrong = document.querySelector('.order__form_wrong');
-      const overlay = document.querySelector('.overlay');
-
-      function getDataFromOrder() {
-        if (orderFormName.value === '' || orderFormPhone.value === '') {
-          orderFormWrong.style.display = 'block';
-        } else {
-          orderFormName.value = '';
-          orderFormPhone.value = '';
-          orderPopupForm.style.display = 'none';
-          orderPopupInfo.style.display = 'block';
-          console.log(orderFormName.value);
-          console.log(orderFormPhone.value);
-        }
-
-      }
-
-      function closeOrderModalWindow() {
-        orderPopup.style.display = 'none';
-        overlay.style.display = 'none';
-        orderPopupForm.style.display = 'block';
-        orderPopupInfo.style.display = 'none';
-        orderFormWrong.style.display = 'none';
-      }
-
-      function openOrderModalWindow() {
-        orderPopup.style.display = 'block';
-        overlay.style.display = 'block';
-        orderPopupForm.style.display = 'block';
-        orderPopupInfo.style.display = 'none';
-        orderFormWrong.style.display = 'none';
-      }
-    </script>
-  </body>
 </html>
