@@ -592,7 +592,7 @@ h4 {
     height: 310px;
   }
 }
-@media (max-width: 370px) {
+@media (max-width: 425px) {
   .services .services-item__header {
     width: 100%;
   }
