@@ -33,8 +33,9 @@ a {
   cursor: pointer;
 }
 .button:hover {
-  background: #ffffff;
-  color: #1b1c1b;
+  background: #dc8d64;
+  color: #ffffff;
+  border: #dc8d64 1px solid;
 }
 
 .container {
@@ -372,6 +373,11 @@ h4 {
     flex-direction: column;
   }
 }
+@media (max-width: 768px) {
+  .what-are-we-doing .scroll-block-container {
+    min-width: 90%;
+  }
+}
 .what-are-we-doing .scroll-block-container h4 {
   text-wrap: nowrap;
 }
@@ -471,6 +477,10 @@ h4 {
     align-items: center;
   }
 }
+.about-us .master .master-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media (max-width: 1364px) {
   .about-us .master .master-img {
     width: 50%;
@@ -552,6 +562,16 @@ h4 {
     overflow-x: auto;
   }
 }
+@media (max-width: 425px) {
+  .services .services-container {
+    gap: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .services .services-item {
+    min-width: 90%;
+  }
+}
 .services .services-item .services-item__title {
   display: flex;
   justify-content: center;
@@ -574,7 +594,7 @@ h4 {
 }
 @media (max-width: 370px) {
   .services .services-item__header {
-    width: 300px;
+    width: 100%;
   }
 }
 .services .services-item__header .button {
@@ -652,7 +672,7 @@ h4 {
     text-align: center;
   }
   .services .services-item .button-mobile .button {
-    width: 200px;
+    width: 100%;
     height: 60px;
   }
 }
@@ -1076,6 +1096,7 @@ h4 {
   width: 100vw;
   min-height: 100vh;
   background-color: white;
+  color: #1B1C1B;
   z-index: 9999;
 }
 @media (max-width: 900px) {
@@ -1433,5 +1454,33 @@ input:focus {
   100% {
     opacity: 100;
     transform: translateX(0px);
+  }
+}
+.scroll-block-container {
+  transition: transform 0.3s ease, width 0.3s ease, gap 0.3s ease, opacity 0.3s ease;
+}
+
+.button {
+  padding: 16px 20px;
+  border: 1px solid #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  color: #ffffff;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.button:hover {
+  background: #dc8d64;
+  color: #ffffff;
+  border: #dc8d64 1px solid;
+}
+
+@media screen and (max-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -574,50 +574,7 @@
           <a class="offerta" href="#" onclick="openPopupOfferta()">Договір оферти</a>
         </div>
       </nav>
-      <div id="popupOfferta" class="popup">
-        <div class="close" onclick="closePopupOfferta()"><img src="./img/ic cross_menu.svg" alt="close icon"></div>
-        <div class="popup-content" style="text-align: start">
-          <div>
-            <h4>Збір і використання персональних даних</h4>
-            <p>
-              Ми збираємо та використовуємо ваші персональні дані тільки в
-              разі вашої добровільної згоди. При згоді з цим ви дозволяєте нам
-              збирати та використовувати такі дані: ім'я та прізвище,
-              електронна пошта, номер телефону. Збір та обробка ваших даних
-              проводиться відповідно до законів, що діють на території
-              Європейського Союзу та в державі Україна.
-            </p>
-          </div>
-          <div>
-            <h4>Зберігання даних, зміна та видалення</h4>
-            <p>
-              Користувач, який надав свої персональні дані сайту
-              demassage.com.ua, має право на їхню зміну і видалення, а також
-              на відкликання своєї згоди з їхнім використанням. Термін,
-              протягом якого будуть зберігатися ваші персональні дані: час,
-              необхідний для використання даних для основної діяльності сайту.
-              При завершенні використання ваших даних адміністрація сайту
-              видаляє їх. Для доступу до своїх персональних даних ви можете
-              зв'язатися з адміністрацією сайту за такою адресою: Студія De
-              Massage, ЖК Авалон, вул. В. Чорновола 16-Е, м. Львів. Ми можемо
-              передавати ваші особисті дані третій стороні тільки за вашою
-              добровільною згодою, якщо вони були передані, то зміну даних в
-              інших організаціях, не пов'язаних з нами, ми здійснити не
-              можемо.
-            </p>
-          </div>
-          <div>
-            <h4>Використання технічних даних під час відвідування сайту</h4>
-            <p>
-              Під час відвідування вами сайту demassage.com.ua у базі даних
-              зберігаються записи про вашу IP-адресу, час відвідування,
-              налаштування браузера, операційну систему, а також інша технічна
-              інформація, необхідна для коректного відображення вмісту сайту.
-              За цими даними нам неможливо ідентифікувати особу відвідувача.
-            </p>
-          </div>
-        </div>
-      </div>
+
       <div class="contacts">
         <div class="contact">
           <div class="contacts-title">КОНТАКТИ</div>
@@ -644,6 +601,51 @@
       </div>
     </div>
   </footer>
+
+  <div id="popupOfferta" class="popup">
+    <div class="close" onclick="closePopupOfferta()"><img src="./img/ic cross_menu.svg" alt="close icon"></div>
+    <div class="popup-content" style="text-align: start">
+      <div>
+        <h4>Збір і використання персональних даних</h4>
+        <p>
+          Ми збираємо та використовуємо ваші персональні дані тільки в
+          разі вашої добровільної згоди. При згоді з цим ви дозволяєте нам
+          збирати та використовувати такі дані: ім'я та прізвище,
+          електронна пошта, номер телефону. Збір та обробка ваших даних
+          проводиться відповідно до законів, що діють на території
+          Європейського Союзу та в державі Україна.
+        </p>
+      </div>
+      <div>
+        <h4>Зберігання даних, зміна та видалення</h4>
+        <p>
+          Користувач, який надав свої персональні дані сайту
+          demassage.com.ua, має право на їхню зміну і видалення, а також
+          на відкликання своєї згоди з їхнім використанням. Термін,
+          протягом якого будуть зберігатися ваші персональні дані: час,
+          необхідний для використання даних для основної діяльності сайту.
+          При завершенні використання ваших даних адміністрація сайту
+          видаляє їх. Для доступу до своїх персональних даних ви можете
+          зв'язатися з адміністрацією сайту за такою адресою: Студія De
+          Massage, ЖК Авалон, вул. В. Чорновола 16-Е, м. Львів. Ми можемо
+          передавати ваші особисті дані третій стороні тільки за вашою
+          добровільною згодою, якщо вони були передані, то зміну даних в
+          інших організаціях, не пов'язаних з нами, ми здійснити не
+          можемо.
+        </p>
+      </div>
+      <div>
+        <h4>Використання технічних даних під час відвідування сайту</h4>
+        <p>
+          Під час відвідування вами сайту demassage.com.ua у базі даних
+          зберігаються записи про вашу IP-адресу, час відвідування,
+          налаштування браузера, операційну систему, а також інша технічна
+          інформація, необхідна для коректного відображення вмісту сайту.
+          За цими даними нам неможливо ідентифікувати особу відвідувача.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <div class="order__popup">
     <div class="order__popup_wrapper">
@@ -676,7 +678,9 @@
     AOS.init();
   </script>
   <script>
-    let animBlock = document.querySelector(".scroll-block-container");
+    const animBlock = document.querySelector(".scroll-block-container");
+    const headerContainer = document.querySelector(".header-container");
+
     const startGap = 0;
     const endGap = 40;
     const startWidth = 50;
@@ -686,35 +690,29 @@
     const startOpacity = 0;
     const endOpacity = 1;
     let isBurgerMenuOpen = false;
-
-    document.addEventListener("scroll", () => {
+    const updateStyles = () => {
       const scrolled = window.scrollY;
-
       const progress = Math.min(scrolled / 400, 1);
 
       const currentGap = startGap + (endGap - startGap) * progress;
       const currentWidth = startWidth + (endWidth - startWidth) * progress;
       const currentTransformValue =
-        startTransformValue +
-        (endTransformValue - startTransformValue) * progress;
-      const currentOpacity =
-        startOpacity + (endOpacity - startOpacity) * progress;
+        startTransformValue + (endTransformValue - startTransformValue) * progress;
+      const currentOpacity = startOpacity + (endOpacity - startOpacity) * progress;
 
-      animBlock.style.transform =
-        "translateY(-" + currentTransformValue + "px)";
-      animBlock.style.width = currentWidth + "%";
-      animBlock.style.setProperty("gap", currentGap + "px");
+      animBlock.style.transform = `translateY(-${currentTransformValue}px)`;
+      animBlock.style.width = `${currentWidth}%`;
+      animBlock.style.setProperty("gap", `${currentGap}px`);
       animBlock.style.opacity = currentOpacity;
-    });
+    };
 
-    window.addEventListener("scroll", function () {
-      var headerContainer = document.querySelector(".header-container");
-      if (window.scrollY > 0) {
-        headerContainer.style.background = "#1b1c1b";
-      } else {
-        headerContainer.style.background = "transparent";
-      }
-    });
+    const handleScroll = () => {
+      updateStyles();
+      headerContainer.style.background = window.scrollY > 0 ? "#1b1c1b" : "transparent";
+    };
+
+    document.addEventListener("scroll", handleScroll);
+
 
     function openPopupOfferta() {
       document.getElementById("popupOfferta").style.display = "block";
@@ -818,6 +816,5 @@
 
   </script>
 </body>
-<script src="./app.js"></script>
 
 </html>
