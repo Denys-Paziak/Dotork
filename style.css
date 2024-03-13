@@ -891,6 +891,11 @@ h4 {
     padding-bottom: 40px;
   }
 }
+@media (max-width: 425px) {
+  .season-tickets .flex {
+    gap: 10px;
+  }
+}
 .season-tickets .button {
   width: 100%;
 }

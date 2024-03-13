@@ -734,6 +734,8 @@ h4 {
 .season-tickets {
   padding: 40px 0;
 
+
+
   .title {
     p {
       margin-top: 20px;
@@ -799,10 +801,17 @@ h4 {
     margin: 20px 0;
     gap: 40px;
 
+
+
     @media (max-width: 1364px) {
       justify-content: start;
       overflow-x: auto;
       padding-bottom: 40px;
+    }
+
+
+    @media (max-width: 425px) {
+      gap: 10px;
     }
   }
 
