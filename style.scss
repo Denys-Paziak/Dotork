@@ -1618,14 +1618,26 @@ input {
   }
 }
 
+body {
+  -webkit-overflow-scrolling: touch;
+  background-color: #f0f0f0;
+}
+
 
 @media screen and (max-width: 600px) {
+  ::-webkit-scrollbar-track {
+    border-radius: 0.125rem;
+    background-color: lightgray;
+  }
+
   ::-webkit-scrollbar {
-    width: 0px;
-    height: 5px;
+    width: 0.25rem;
+    border-radius: 0.125rem;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #ffffff;
+    border-radius: 0.125rem;
+    background-color: gray;
   }
+
 }
