@@ -621,19 +621,14 @@ h4 {
   position: relative;
 }
 .about-us-item .team-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  -webkit-transition: opacity 0.6s ease, -webkit-transform 0.6s ease;
-  transition: opacity 0.6s ease, -webkit-transform 0.6s ease;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  transition: opacity 0.6s ease, transform 0.6s ease, -webkit-transform 0.6s ease;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-filter: grayscale(100);
+          filter: grayscale(100);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
-.about-us-item:hover .team-image {
-  opacity: 0;
+.about-us-item .team-hover:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 .about-us-item:hover .team-hover {
   opacity: 1;
